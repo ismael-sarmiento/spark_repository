@@ -1,7 +1,9 @@
+import os.path
+
 from pyspark.conf import SparkConf
 from pyspark.sql import SparkSession
+
 import kimera_data.components.etl as kimera_etl
-import os.path
 
 # kimera-data
 config = kimera_etl \
@@ -23,7 +25,7 @@ spark_session = SparkSession.builder.config(conf=spark_conf).getOrCreate()
 # spark-context
 spark_context = spark_session.sparkContext
 # spark-context-set-level
-spark_context.setLogLevel("DEBUG")
+spark_context.setLogLevel(config["log-level"])
 
 # spark-df
 spark_df = spark_session.read.csv(f"{os.path.join(os.getcwd(), config['file-path'])}")

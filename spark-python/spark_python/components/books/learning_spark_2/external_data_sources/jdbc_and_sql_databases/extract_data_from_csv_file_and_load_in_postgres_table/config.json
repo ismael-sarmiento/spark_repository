@@ -1,0 +1,26 @@
+{
+  "spark-config": {
+    "spark.master": "local[*]",
+    "spark.app.name": "bender-spark-repository-external-data-sources-jdbc",
+    "spark.jars": "/home/isarmiento/isarmiento/projects/ismael-sarmiento/spark-repository/spark-cross/drivers/postgresql-42.2.20.jar"
+  },
+  "extractors-config": {
+    "csv": {
+      "covid-variants": {
+        "path": "covid-variants.csv",
+        "sep": ",",
+        "header": true
+      }
+    }
+  },
+  "jdbc": {
+    "url": "jdbc:postgresql://localhost:5432/postgres",
+    "table": "public.covid_variants",
+    "mode": "overwrite",
+    "properties": {
+      "user": "postgres",
+      "password": "postgres",
+      "driver": "org.postgresql.Driver"
+    }
+  }
+}

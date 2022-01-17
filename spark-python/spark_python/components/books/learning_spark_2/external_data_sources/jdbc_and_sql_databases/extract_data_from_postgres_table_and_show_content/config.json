@@ -1,0 +1,16 @@
+{
+  "spark-config": {
+    "spark.master": "local[2]",
+    "spark.app.name": "bender-spark-repository-external-data-sources-jdbc",
+    "spark.jars": "/home/isarmiento/isarmiento/projects/ismael-sarmiento/spark-repository/spark-cross/drivers/postgresql-42.2.20.jar"
+  },
+  "jdbc": {
+    "url": "jdbc:postgresql://localhost:5432/postgres",
+    "table": "auxiliar.ta_aislamiento_tuberias",
+    "properties": {
+      "user": "postgres",
+      "password": "postgres",
+      "driver": "org.postgresql.Driver"
+    }
+  }
+}

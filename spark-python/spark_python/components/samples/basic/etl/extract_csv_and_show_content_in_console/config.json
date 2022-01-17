@@ -1,0 +1,9 @@
+{
+  "spark-config": {
+    "spark.master": "local[2]",
+    "spark.master.tmp": "spark://isarmiento:7077",
+    "spark.app.name": "bender-spark-repository-core-extract-csv-and-show-content-in-console"
+  },
+  "file-path": "addresses.csv",
+  "log-level": "INFO"
+}
