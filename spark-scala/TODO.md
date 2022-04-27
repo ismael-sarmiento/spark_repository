@@ -1,0 +1,1 @@
+er.com/scala/how-to-use-serialization-in-scala-serializable-trait/)
