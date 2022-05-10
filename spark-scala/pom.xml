@@ -12,7 +12,7 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scala.version>2.13.6</scala.version>
+        <scala.version>2.13.5</scala.version>
     </properties>
 
     <dependencies>
@@ -30,6 +30,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- Spark-Core -->
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.13</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+
         <!-- Log -->
         <!-- slf4j - Simple Logging Facade for Java
         Es la que se utilizará en la aplicación para escribir los mensajes de log -->
